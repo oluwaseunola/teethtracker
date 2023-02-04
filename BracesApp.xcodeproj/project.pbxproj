@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29038DD52980C761005D7C11 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29038DD42980C761005D7C11 /* DetailView.swift */; };
+		29038DD929832232005D7C11 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29038DD829832232005D7C11 /* HomeRepository.swift */; };
+		29038DDB29832360005D7C11 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29038DDA29832360005D7C11 /* HomeViewModel.swift */; };
+		29056F2B29808B2C00C7BC3C /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056F2A29808B2B00C7BC3C /* CameraViewModel.swift */; };
+		29056F3029809ED900C7BC3C /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056F2F29809ED900C7BC3C /* PhotoRepository.swift */; };
+		292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF429872F470073EE0D /* VideoGenerator.swift */; };
+		292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF6298745A20073EE0D /* CameraPreviewView.swift */; };
+		2960C9482989B4DF008E57F7 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C9472989B4DF008E57F7 /* VideoViewModel.swift */; };
+		29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */; };
+		29D1CD20296E324A00BB92CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1F296E324A00BB92CB /* RootView.swift */; };
+		29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1CD21296E324D00BB92CB /* Assets.xcassets */; };
+		29D1CD25296E324D00BB92CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1CD24296E324D00BB92CB /* Preview Assets.xcassets */; };
+		29D1CD27296E324D00BB92CB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD26296E324D00BB92CB /* Persistence.swift */; };
+		29D1CD2A296E324D00BB92CB /* BracesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */; };
+		29D1CD34296E324D00BB92CB /* BracesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD33296E324D00BB92CB /* BracesAppTests.swift */; };
+		29D1CD3E296E324D00BB92CB /* BracesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD3D296E324D00BB92CB /* BracesAppUITests.swift */; };
+		29D1CD40296E324D00BB92CB /* BracesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD3F296E324D00BB92CB /* BracesAppUITestsLaunchTests.swift */; };
+		29D1CD50296E32AC00BB92CB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD4F296E32AC00BB92CB /* TabBarView.swift */; };
+		29D1CD52296E5BC400BB92CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD51296E5BC400BB92CB /* HomeView.swift */; };
+		29D1CD54296E5BD200BB92CB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD53296E5BD200BB92CB /* CameraView.swift */; };
+		29D1CD56296E5BE100BB92CB /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD55296E5BE100BB92CB /* VideoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29D1CD30296E324D00BB92CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29D1CD12296E324A00BB92CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29D1CD19296E324A00BB92CB;
+			remoteInfo = BracesApp;
+		};
+		29D1CD3A296E324D00BB92CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29D1CD12296E324A00BB92CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29D1CD19296E324A00BB92CB;
+			remoteInfo = BracesApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29038DD42980C761005D7C11 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		29038DD829832232005D7C11 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		29038DDA29832360005D7C11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		29056F2A29808B2B00C7BC3C /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		29056F2F29809ED900C7BC3C /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		292CDCF429872F470073EE0D /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		292CDCF6298745A20073EE0D /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		2960C9472989B4DF008E57F7 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		2960C9492989CC2D008E57F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29D1CD1A296E324A00BB92CB /* BracesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BracesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppApp.swift; sourceTree = "<group>"; };
+		29D1CD1F296E324A00BB92CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		29D1CD21296E324D00BB92CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29D1CD24296E324D00BB92CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29D1CD26296E324D00BB92CB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		29D1CD29296E324D00BB92CB /* BracesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BracesApp.xcdatamodel; sourceTree = "<group>"; };
+		29D1CD2F296E324D00BB92CB /* BracesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BracesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D1CD33296E324D00BB92CB /* BracesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppTests.swift; sourceTree = "<group>"; };
+		29D1CD39296E324D00BB92CB /* BracesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BracesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D1CD3D296E324D00BB92CB /* BracesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppUITests.swift; sourceTree = "<group>"; };
+		29D1CD3F296E324D00BB92CB /* BracesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		29D1CD4F296E32AC00BB92CB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		29D1CD51296E5BC400BB92CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "../New Group1/HomeView.swift"; sourceTree = "<group>"; };
+		29D1CD53296E5BD200BB92CB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		29D1CD55296E5BE100BB92CB /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29D1CD17296E324A00BB92CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD2C296E324D00BB92CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD36296E324D00BB92CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29038DD32980C744005D7C11 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD53296E5BD200BB92CB /* CameraView.swift */,
+				292CDCF6298745A20073EE0D /* CameraPreviewView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		29038DD62980C766005D7C11 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD51296E5BC400BB92CB /* HomeView.swift */,
+				29038DD42980C761005D7C11 /* DetailView.swift */,
+				29038DD32980C744005D7C11 /* Camera */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		29038DD72980C778005D7C11 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD55296E5BE100BB92CB /* VideoView.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		29056F2E29809EB900C7BC3C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				29056F2F29809ED900C7BC3C /* PhotoRepository.swift */,
+				29038DD829832232005D7C11 /* HomeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		29D1CD11296E324A00BB92CB = {
+			isa = PBXGroup;
+			children = (
+				29D1CD1C296E324A00BB92CB /* BracesApp */,
+				29D1CD32296E324D00BB92CB /* BracesAppTests */,
+				29D1CD3C296E324D00BB92CB /* BracesAppUITests */,
+				29D1CD1B296E324A00BB92CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29D1CD1B296E324A00BB92CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD1A296E324A00BB92CB /* BracesApp.app */,
+				29D1CD2F296E324D00BB92CB /* BracesAppTests.xctest */,
+				29D1CD39296E324D00BB92CB /* BracesAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29D1CD1C296E324A00BB92CB /* BracesApp */ = {
+			isa = PBXGroup;
+			children = (
+				2960C9492989CC2D008E57F7 /* Info.plist */,
+				29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */,
+				29D1CD4C296E326A00BB92CB /* Models */,
+				29D1CD4D296E327800BB92CB /* Views */,
+				29D1CD4E296E328300BB92CB /* ViewModels */,
+				29056F2E29809EB900C7BC3C /* Repositories */,
+				29D1CD21296E324D00BB92CB /* Assets.xcassets */,
+				292CDCF429872F470073EE0D /* VideoGenerator.swift */,
+				29D1CD26296E324D00BB92CB /* Persistence.swift */,
+				29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */,
+				29D1CD23296E324D00BB92CB /* Preview Content */,
+			);
+			path = BracesApp;
+			sourceTree = "<group>";
+		};
+		29D1CD23296E324D00BB92CB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD24296E324D00BB92CB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29D1CD32296E324D00BB92CB /* BracesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD33296E324D00BB92CB /* BracesAppTests.swift */,
+			);
+			path = BracesAppTests;
+			sourceTree = "<group>";
+		};
+		29D1CD3C296E324D00BB92CB /* BracesAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD3D296E324D00BB92CB /* BracesAppUITests.swift */,
+				29D1CD3F296E324D00BB92CB /* BracesAppUITestsLaunchTests.swift */,
+			);
+			path = BracesAppUITests;
+			sourceTree = "<group>";
+		};
+		29D1CD4C296E326A00BB92CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		29D1CD4D296E327800BB92CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD1F296E324A00BB92CB /* RootView.swift */,
+				29D1CD4F296E32AC00BB92CB /* TabBarView.swift */,
+				29D1CD57296E5BE900BB92CB /* Tabs */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29D1CD4E296E328300BB92CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				29056F2A29808B2B00C7BC3C /* CameraViewModel.swift */,
+				29038DDA29832360005D7C11 /* HomeViewModel.swift */,
+				2960C9472989B4DF008E57F7 /* VideoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		29D1CD57296E5BE900BB92CB /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				29038DD62980C766005D7C11 /* Home */,
+				29038DD72980C778005D7C11 /* Video */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29D1CD19296E324A00BB92CB /* BracesApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D1CD43296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesApp" */;
+			buildPhases = (
+				29D1CD16296E324A00BB92CB /* Sources */,
+				29D1CD17296E324A00BB92CB /* Frameworks */,
+				29D1CD18296E324A00BB92CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BracesApp;
+			productName = BracesApp;
+			productReference = 29D1CD1A296E324A00BB92CB /* BracesApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29D1CD2E296E324D00BB92CB /* BracesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D1CD46296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesAppTests" */;
+			buildPhases = (
+				29D1CD2B296E324D00BB92CB /* Sources */,
+				29D1CD2C296E324D00BB92CB /* Frameworks */,
+				29D1CD2D296E324D00BB92CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29D1CD31296E324D00BB92CB /* PBXTargetDependency */,
+			);
+			name = BracesAppTests;
+			productName = BracesAppTests;
+			productReference = 29D1CD2F296E324D00BB92CB /* BracesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29D1CD38296E324D00BB92CB /* BracesAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D1CD49296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesAppUITests" */;
+			buildPhases = (
+				29D1CD35296E324D00BB92CB /* Sources */,
+				29D1CD36296E324D00BB92CB /* Frameworks */,
+				29D1CD37296E324D00BB92CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29D1CD3B296E324D00BB92CB /* PBXTargetDependency */,
+			);
+			name = BracesAppUITests;
+			productName = BracesAppUITests;
+			productReference = 29D1CD39296E324D00BB92CB /* BracesAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29D1CD12296E324A00BB92CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					29D1CD19296E324A00BB92CB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					29D1CD2E296E324D00BB92CB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 29D1CD19296E324A00BB92CB;
+					};
+					29D1CD38296E324D00BB92CB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 29D1CD19296E324A00BB92CB;
+					};
+				};
+			};
+			buildConfigurationList = 29D1CD15296E324A00BB92CB /* Build configuration list for PBXProject "BracesApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29D1CD11296E324A00BB92CB;
+			productRefGroup = 29D1CD1B296E324A00BB92CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29D1CD19296E324A00BB92CB /* BracesApp */,
+				29D1CD2E296E324D00BB92CB /* BracesAppTests */,
+				29D1CD38296E324D00BB92CB /* BracesAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29D1CD18296E324A00BB92CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D1CD25296E324D00BB92CB /* Preview Assets.xcassets in Resources */,
+				29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD2D296E324D00BB92CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD37296E324D00BB92CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29D1CD16296E324A00BB92CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D1CD27296E324D00BB92CB /* Persistence.swift in Sources */,
+				29038DD929832232005D7C11 /* HomeRepository.swift in Sources */,
+				2960C9482989B4DF008E57F7 /* VideoViewModel.swift in Sources */,
+				29038DD52980C761005D7C11 /* DetailView.swift in Sources */,
+				29056F3029809ED900C7BC3C /* PhotoRepository.swift in Sources */,
+				29D1CD54296E5BD200BB92CB /* CameraView.swift in Sources */,
+				29D1CD20296E324A00BB92CB /* RootView.swift in Sources */,
+				29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */,
+				292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */,
+				29D1CD56296E5BE100BB92CB /* VideoView.swift in Sources */,
+				292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */,
+				29038DDB29832360005D7C11 /* HomeViewModel.swift in Sources */,
+				29056F2B29808B2C00C7BC3C /* CameraViewModel.swift in Sources */,
+				29D1CD52296E5BC400BB92CB /* HomeView.swift in Sources */,
+				29D1CD50296E32AC00BB92CB /* TabBarView.swift in Sources */,
+				29D1CD2A296E324D00BB92CB /* BracesApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD2B296E324D00BB92CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D1CD34296E324D00BB92CB /* BracesAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D1CD35296E324D00BB92CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D1CD40296E324D00BB92CB /* BracesAppUITestsLaunchTests.swift in Sources */,
+				29D1CD3E296E324D00BB92CB /* BracesAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29D1CD31296E324D00BB92CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29D1CD19296E324A00BB92CB /* BracesApp */;
+			targetProxy = 29D1CD30296E324D00BB92CB /* PBXContainerItemProxy */;
+		};
+		29D1CD3B296E324D00BB92CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29D1CD19296E324A00BB92CB /* BracesApp */;
+			targetProxy = 29D1CD3A296E324D00BB92CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29D1CD41296E324D00BB92CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29D1CD42296E324D00BB92CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29D1CD44296E324D00BB92CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BracesApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29D1CD45296E324D00BB92CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BracesApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29D1CD47296E324D00BB92CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BracesApp.app/BracesApp";
+			};
+			name = Debug;
+		};
+		29D1CD48296E324D00BB92CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BracesApp.app/BracesApp";
+			};
+			name = Release;
+		};
+		29D1CD4A296E324D00BB92CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BracesApp;
+			};
+			name = Debug;
+		};
+		29D1CD4B296E324D00BB92CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.BracesAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BracesApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29D1CD15296E324A00BB92CB /* Build configuration list for PBXProject "BracesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D1CD41296E324D00BB92CB /* Debug */,
+				29D1CD42296E324D00BB92CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D1CD43296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D1CD44296E324D00BB92CB /* Debug */,
+				29D1CD45296E324D00BB92CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D1CD46296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D1CD47296E324D00BB92CB /* Debug */,
+				29D1CD48296E324D00BB92CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D1CD49296E324D00BB92CB /* Build configuration list for PBXNativeTarget "BracesAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D1CD4A296E324D00BB92CB /* Debug */,
+				29D1CD4B296E324D00BB92CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29D1CD29296E324D00BB92CB /* BracesApp.xcdatamodel */,
+			);
+			currentVersion = 29D1CD29296E324D00BB92CB /* BracesApp.xcdatamodel */;
+			path = BracesApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 29D1CD12296E324A00BB92CB /* Project object */;
+}
