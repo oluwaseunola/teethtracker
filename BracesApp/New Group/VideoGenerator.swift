@@ -175,7 +175,7 @@ class VideoGenerator {
     
     
     private func exportAsset(asset: AVAsset, completion: @escaping (Result<Bool, Error>)-> Void) {
-        let exportPath = NSTemporaryDirectory().appendingFormat("/video.mov")
+        let exportPath = NSTemporaryDirectory().appendingFormat("/\(UUID().uuidString)video.mov")
         let exportURL = URL(fileURLWithPath: exportPath)
     
         let exporter = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality)
