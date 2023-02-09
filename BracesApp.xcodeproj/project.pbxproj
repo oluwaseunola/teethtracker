@@ -15,6 +15,8 @@
 		292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF429872F470073EE0D /* VideoGenerator.swift */; };
 		292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF6298745A20073EE0D /* CameraPreviewView.swift */; };
 		2960C9482989B4DF008E57F7 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C9472989B4DF008E57F7 /* VideoViewModel.swift */; };
+		2960C94C2991EAA2008E57F7 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C94B2991EAA2008E57F7 /* VideoHelper.swift */; };
+		2960C94F29944D82008E57F7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C94E29944D82008E57F7 /* Extensions.swift */; };
 		29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */; };
 		29D1CD20296E324A00BB92CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1F296E324A00BB92CB /* RootView.swift */; };
 		29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1CD21296E324D00BB92CB /* Assets.xcassets */; };
@@ -53,10 +55,12 @@
 		29038DDA29832360005D7C11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		29056F2A29808B2B00C7BC3C /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		29056F2F29809ED900C7BC3C /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
-		292CDCF429872F470073EE0D /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		292CDCF429872F470073EE0D /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoGenerator.swift; path = "../New Group/VideoGenerator.swift"; sourceTree = "<group>"; };
 		292CDCF6298745A20073EE0D /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		2960C9472989B4DF008E57F7 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		2960C9492989CC2D008E57F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2960C94B2991EAA2008E57F7 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		2960C94E29944D82008E57F7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		29D1CD1A296E324A00BB92CB /* BracesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BracesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppApp.swift; sourceTree = "<group>"; };
 		29D1CD1F296E324A00BB92CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,23 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		2960C94A2991EA8B008E57F7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				292CDCF429872F470073EE0D /* VideoGenerator.swift */,
+				2960C94B2991EAA2008E57F7 /* VideoHelper.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2960C94D29944D71008E57F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2960C94E29944D82008E57F7 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		29D1CD11296E324A00BB92CB = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +182,13 @@
 			children = (
 				2960C9492989CC2D008E57F7 /* Info.plist */,
 				29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */,
+				2960C94D29944D71008E57F7 /* Extensions */,
+				2960C94A2991EA8B008E57F7 /* Tools */,
 				29D1CD4C296E326A00BB92CB /* Models */,
 				29D1CD4D296E327800BB92CB /* Views */,
 				29D1CD4E296E328300BB92CB /* ViewModels */,
 				29056F2E29809EB900C7BC3C /* Repositories */,
 				29D1CD21296E324D00BB92CB /* Assets.xcassets */,
-				292CDCF429872F470073EE0D /* VideoGenerator.swift */,
 				29D1CD26296E324D00BB92CB /* Persistence.swift */,
 				29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */,
 				29D1CD23296E324D00BB92CB /* Preview Content */,
@@ -366,9 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D1CD27296E324D00BB92CB /* Persistence.swift in Sources */,
+				2960C94F29944D82008E57F7 /* Extensions.swift in Sources */,
 				29038DD929832232005D7C11 /* HomeRepository.swift in Sources */,
 				2960C9482989B4DF008E57F7 /* VideoViewModel.swift in Sources */,
 				29038DD52980C761005D7C11 /* DetailView.swift in Sources */,
+				2960C94C2991EAA2008E57F7 /* VideoHelper.swift in Sources */,
 				29056F3029809ED900C7BC3C /* PhotoRepository.swift in Sources */,
 				29D1CD54296E5BD200BB92CB /* CameraView.swift in Sources */,
 				29D1CD20296E324A00BB92CB /* RootView.swift in Sources */,

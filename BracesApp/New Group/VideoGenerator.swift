@@ -22,6 +22,7 @@ class VideoGenerator {
     private var movieURLS : [URL] = []
     
     private var movieAsset : AVMutableComposition?
+
     
     private init(){
         
@@ -35,7 +36,7 @@ class VideoGenerator {
                 
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
                 self?.mergeClips()
-                if let movieAsset =  self?.movieAsset {
+                if let movieAsset =  self?.movieAsset{
                     
                     self?.exportAsset(asset: movieAsset) { result in
                         switch result{
@@ -149,23 +150,28 @@ class VideoGenerator {
     private func mergeClips(){
         
         let movie = AVMutableComposition()
+        var time : CMTime = .zero
+        guard let videoTrack = movie.addMutableTrack(withMediaType: .video, preferredTrackID: Int32(kCMPersistentTrackID_Invalid)) else {return}
             
         for url in movieURLS{
             let asset = AVURLAsset(url: url)
-            let videoTrack = movie.addMutableTrack(withMediaType: .video, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
-            let movieTrack = asset.tracks(withMediaType: .video).first!
+            let movieTrack = asset.tracks(withMediaType: .video)[0]
             let movieRange = CMTimeRangeMake(start: CMTime.zero, duration: asset.duration)//3
             do {
-                try videoTrack?.insertTimeRange(movieRange, of: movieTrack, at: .zero) //4
+                try videoTrack.insertTimeRange(movieRange, of: movieTrack, at: time)
+                time = CMTimeAdd(time, asset.duration)
             }
             catch{
             print(error)
             }
+            
         }
+    
+        videoTrack.preferredTransform = VideoHelper.getVideoTransform()
         
         self.movieAsset = movie
-        
-    }
+    
+        }
     
     
     private func exportAsset(asset: AVAsset, completion: @escaping (Result<Bool, Error>)-> Void) {
@@ -175,6 +181,7 @@ class VideoGenerator {
         let exporter = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality)
         exporter?.outputURL = exportURL
         exporter?.outputFileType = .mov
+        
        
 
         exporter?.exportAsynchronously(completionHandler: {
@@ -199,8 +206,9 @@ class VideoGenerator {
     private func cleanUp(){
         pixelBuffers = []
         movieURLS = []
+        self.movieAsset = nil
     }
     
     
-    
 }
+
