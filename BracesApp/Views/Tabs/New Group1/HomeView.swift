@@ -34,12 +34,19 @@ GeometryReader{ geometry in
     VStack{
             
             HStack{
+                Text("SmileTracker")
+                    .font(.custom(FontManager.bold, size: 20))
                 Spacer()
                 Button {
                     showCamera = true
             } label: {
+                
                 Image(systemName: "camera.fill")
-                    .font(.system(size: 40))
+                    .foregroundColor(Color("background"))
+                    .font(.system(size: 20))
+                    .frame(width:60,height: 60)
+                    .background(Color("button1"))
+                    .mask(Circle())
                 
             }
                 
@@ -47,7 +54,7 @@ GeometryReader{ geometry in
             .frame(maxWidth:.infinity)
             .frame(height:100)
             .padding(.horizontal)
-            .background(.ultraThickMaterial)
+            .background(Color("background2"))
             
         
         if !items.isEmpty {
@@ -59,42 +66,40 @@ GeometryReader{ geometry in
                         ForEach(items) { item in
                             
                             VStack{
-                                HStack{
-                                    Spacer()
-                                    Menu {
-                                        Button {
-//                                          Delete Item
-                                            viewModel.deleteImage(context: viewContext, image: item)
-                                            
-                                        } label: {
-                                            Text("Delete")
-                                        }
 
-                                    } label: {
-                                        Image(systemName: "ellipsis")
-                                            .font(.system(size: 25))
-                                    }
-
-                                }
-                                VStack{
-                                    
-                                
-                                
                                 if let imageData = item.data, let image = UIImage(data: imageData) {
-                                    Image(uiImage: image).resizable().aspectRatio(contentMode: .fit).frame(width:geometry.size.width/3.3,height: geometry.size.width/3.3).cornerRadius(15)
+                                    Image(uiImage: image).resizable().aspectRatio(contentMode: .fill).frame(width:geometry.size.width/3.3,height: geometry.size.width/3.3).cornerRadius(15)
+                                        .contextMenu {
+                                            
+                                            if let itemDate = item.date{Text(itemFormatter.string(from: itemDate))}
+                                            
+                                            Button {
+                                                if let imageData = item.data, let image = UIImage(data: imageData){
+                                                    currentImage = Image(uiImage: image)
+                                                }
+
+                                                showDetial = true
+                                                
+                                            } label: {
+                                                Text("View Image")
+                                            }
+                                            
+                                            Button(role:.destructive) {
+        //                                          Delete Item
+                                                viewModel.deleteImage(context: viewContext, image: item)
+                                                
+                                            } label: {
+                                                Label {
+                                                    Text("Delete Image")
+                                                } icon: {
+                                                    Image(systemName: "trash")
+                                                }
+
+                                            }
+         
+                                        }
                                 }
                                 
-                                if let itemDate = item.date{Text(itemFormatter.string(from: itemDate))}
-                                
-                            }
-                                .onTapGesture {
-                                if let imageData = item.data, let image = UIImage(data: imageData){
-                                    currentImage = Image(uiImage: image)
-                                }
-                                
-                                showDetial = true
-                                
-                            }
                         }
                         }
                         
@@ -105,7 +110,8 @@ GeometryReader{ geometry in
             .frame(maxWidth:.infinity)
             } else{
                 Spacer()
-                Text("No photos, take a photo to get started.")
+                Text("No photos, take a photo to get started!")
+                    .font(.custom(FontManager.bold, size: 19))
                 Spacer()
             }
         }
@@ -123,3 +129,9 @@ GeometryReader{ geometry in
     }
 }
 
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+        
+    }
+}
