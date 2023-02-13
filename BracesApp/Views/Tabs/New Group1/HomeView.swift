@@ -73,17 +73,6 @@ GeometryReader{ geometry in
                                             
                                             if let itemDate = item.date{Text(itemFormatter.string(from: itemDate))}
                                             
-                                            Button {
-                                                if let imageData = item.data, let image = UIImage(data: imageData){
-                                                    currentImage = Image(uiImage: image)
-                                                }
-
-                                                showDetial = true
-                                                
-                                            } label: {
-                                                Text("View Image")
-                                            }
-                                            
                                             Button(role:.destructive) {
         //                                          Delete Item
                                                 viewModel.deleteImage(context: viewContext, image: item)
@@ -97,6 +86,13 @@ GeometryReader{ geometry in
 
                                             }
          
+                                        }
+                                        .onTapGesture {
+                                            if let imageData = item.data, let image = UIImage(data: imageData){
+                                                currentImage = Image(uiImage: image)
+                                            }
+
+                                            showDetial = true
                                         }
                                 }
                                 

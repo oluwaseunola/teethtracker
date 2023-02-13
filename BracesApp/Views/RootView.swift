@@ -12,6 +12,7 @@ struct RootView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @State var selectedTab : Tab = .home
+    @State var isOnboarded = !UserDefaults.standard.bool(forKey: "isOnboarded")
     
     var body: some View {
         
@@ -22,6 +23,8 @@ struct RootView: View {
                 HomeView()
             case .video:
                 VideoView()
+            case .notification:
+                NotificationView()
             }
             
             VStack{
@@ -32,6 +35,8 @@ struct RootView: View {
                 
             }
             
+        }.fullScreenCover(isPresented: $isOnboarded) {
+            OnboardingView()
         }
          
     }

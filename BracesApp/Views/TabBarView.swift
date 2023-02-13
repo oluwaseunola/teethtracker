@@ -26,27 +26,40 @@ struct TabBarView: View {
                 selectedTab = .home
             } label: {
                 
-                Image(systemName: selectedTab == .home ? "house.fill" : "house")
+                Image(selectedTab == .home ? "Icons-Home-Fill" : "Icons-Home-Outline")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:100, height:40)
+                    .frame(width:60, height:60)
                 
                 
-            }
-            Rectangle()
-                .frame(width:1, height: 50)
+            }.padding(.leading,20)
+            
+            Spacer()
+         
             Button {
                 selectedTab = .video
             } label: {
-                Image(systemName: selectedTab == .video ? "video.fill" : "video")
+                Image(selectedTab == .video ? "Icons-Video-Fill" : "Icons-Video-Outline")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:100, height:40)
+                    .frame(width:60, height:60)
                 
             }
             
+            Spacer()
+            
+            Button {
+                selectedTab = .notification
+            } label: {
+                Image(selectedTab == .notification ? "Icons-Bell-Fill" : "Icons-Bell-Outline")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:60, height:60)
+                
+            }.padding(.trailing,20)
+            
         }
-        .frame(height:100)
+        .frame(height:80)
         .frame(maxWidth:.infinity)
         .background(.ultraThickMaterial)
         .cornerRadius(15)
@@ -66,5 +79,5 @@ struct TabBarView_Previews: PreviewProvider {
 }
 
 enum Tab {
-    case home, video
+    case home, video, notification
 }
