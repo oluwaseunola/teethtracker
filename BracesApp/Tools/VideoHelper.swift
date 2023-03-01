@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 import SwiftUI
 
-class VideoHelper {
+final class VideoHelper {
     
     static private var orientation = UIDevice.current.orientation
     

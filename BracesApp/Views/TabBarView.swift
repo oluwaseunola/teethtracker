@@ -15,10 +15,7 @@ struct TabBarView: View {
         
         
         //MARK: - TabBar
-        
-        
-        
-        
+
         HStack(alignment:.center){
             
             
@@ -64,10 +61,6 @@ struct TabBarView: View {
         .background(.ultraThickMaterial)
         .cornerRadius(15)
         .padding(.horizontal)
-        
-        
-        
-        
         
     }
 }

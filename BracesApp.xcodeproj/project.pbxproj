@@ -16,6 +16,7 @@
 		292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF6298745A20073EE0D /* CameraPreviewView.swift */; };
 		2955A9782999B8DD0063E4AD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9772999B8DD0063E4AD /* NotificationView.swift */; };
 		2955A97A2999BA510063E4AD /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9792999BA510063E4AD /* Page.swift */; };
+		2955A97E299AA2FA0063E4AD /* PopOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A97D299AA2FA0063E4AD /* PopOut.swift */; };
 		2960C9482989B4DF008E57F7 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C9472989B4DF008E57F7 /* VideoViewModel.swift */; };
 		2960C94C2991EAA2008E57F7 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C94B2991EAA2008E57F7 /* VideoHelper.swift */; };
 		2960C94F29944D82008E57F7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C94E29944D82008E57F7 /* Extensions.swift */; };
@@ -24,6 +25,7 @@
 		2960C9772996EFE8008E57F7 /* Jost-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2960C9612996EFE8008E57F7 /* Jost-Regular.ttf */; };
 		2960C9792996EFE8008E57F7 /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2960C9632996EFE8008E57F7 /* Jost-Light.ttf */; };
 		2960C9822996F9E7008E57F7 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C9812996F9E7008E57F7 /* FontManager.swift */; };
+		29A4288529A2E1A200FBD042 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4288429A2E1A200FBD042 /* NotificationViewModel.swift */; };
 		29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */; };
 		29D1CD20296E324A00BB92CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1F296E324A00BB92CB /* RootView.swift */; };
 		29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1CD21296E324D00BB92CB /* Assets.xcassets */; };
@@ -66,6 +68,7 @@
 		292CDCF6298745A20073EE0D /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		2955A9772999B8DD0063E4AD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2955A9792999BA510063E4AD /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		2955A97D299AA2FA0063E4AD /* PopOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOut.swift; sourceTree = "<group>"; };
 		2960C9472989B4DF008E57F7 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		2960C9492989CC2D008E57F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2960C94B2991EAA2008E57F7 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		2960C9612996EFE8008E57F7 /* Jost-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Regular.ttf"; sourceTree = "<group>"; };
 		2960C9632996EFE8008E57F7 /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		2960C9812996F9E7008E57F7 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		29A4288429A2E1A200FBD042 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		29D1CD1A296E324A00BB92CB /* BracesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BracesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppApp.swift; sourceTree = "<group>"; };
 		29D1CD1F296E324A00BB92CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -162,6 +166,23 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		2955A97B299A95570063E4AD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */,
+				29D1CD26296E324D00BB92CB /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2955A97C299AA2D20063E4AD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2955A97D299AA2FA0063E4AD /* PopOut.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2960C94A2991EA8B008E57F7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,12 +201,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		2960C9502996A101008E57F7 /* Intro */ = {
+		2960C9502996A101008E57F7 /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
 				2960C9512996A118008E57F7 /* OnboardingView.swift */,
 			);
-			path = Intro;
+			path = Onboard;
 			sourceTree = "<group>";
 		};
 		2960C9532996EFE8008E57F7 /* Jost */ = {
@@ -240,8 +261,7 @@
 				29056F2E29809EB900C7BC3C /* Repositories */,
 				29D1CD21296E324D00BB92CB /* Assets.xcassets */,
 				2960C9532996EFE8008E57F7 /* Jost */,
-				29D1CD26296E324D00BB92CB /* Persistence.swift */,
-				29D1CD28296E324D00BB92CB /* BracesApp.xcdatamodeld */,
+				2955A97B299A95570063E4AD /* CoreData */,
 				29D1CD23296E324D00BB92CB /* Preview Content */,
 			);
 			path = BracesApp;
@@ -285,7 +305,8 @@
 			children = (
 				29D1CD1F296E324A00BB92CB /* RootView.swift */,
 				29D1CD4F296E32AC00BB92CB /* TabBarView.swift */,
-				2960C9502996A101008E57F7 /* Intro */,
+				2955A97C299AA2D20063E4AD /* Components */,
+				2960C9502996A101008E57F7 /* Onboard */,
 				29D1CD57296E5BE900BB92CB /* Tabs */,
 			);
 			path = Views;
@@ -297,6 +318,7 @@
 				29056F2A29808B2B00C7BC3C /* CameraViewModel.swift */,
 				29038DDA29832360005D7C11 /* HomeViewModel.swift */,
 				2960C9472989B4DF008E57F7 /* VideoViewModel.swift */,
+				29A4288429A2E1A200FBD042 /* NotificationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -459,7 +481,9 @@
 				2960C9822996F9E7008E57F7 /* FontManager.swift in Sources */,
 				292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */,
 				2960C9522996A118008E57F7 /* OnboardingView.swift in Sources */,
+				2955A97E299AA2FA0063E4AD /* PopOut.swift in Sources */,
 				29D1CD56296E5BE100BB92CB /* VideoView.swift in Sources */,
+				29A4288529A2E1A200FBD042 /* NotificationViewModel.swift in Sources */,
 				292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */,
 				29038DDB29832360005D7C11 /* HomeViewModel.swift in Sources */,
 				29056F2B29808B2C00C7BC3C /* CameraViewModel.swift in Sources */,

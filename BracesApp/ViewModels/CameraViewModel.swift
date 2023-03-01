@@ -19,6 +19,7 @@ final class CameraViewModel : NSObject, ObservableObject{
     @Published var preview = AVCaptureVideoPreviewLayer()
     @Published var isSaved = false
     @Published var photoData = Data()
+    @Published var showTip = false
     
     var repository : PhotoRepository?
     

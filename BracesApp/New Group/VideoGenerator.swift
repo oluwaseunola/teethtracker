@@ -11,7 +11,7 @@ import AVFoundation
 import OSLog
 import Photos
 
-class VideoGenerator {
+final class VideoGenerator {
     
     static let shared = VideoGenerator()
     
@@ -32,26 +32,27 @@ class VideoGenerator {
         if !images.isEmpty{
             
                 generatePixelBuffers(from: images)
-                generateFrames(from: names,duration: duration)
+            generateFrames(from: names,duration: duration){
                 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-                self?.mergeClips()
-                if let movieAsset =  self?.movieAsset{
-                    
-                    self?.exportAsset(asset: movieAsset) { result in
-                        switch result{
-                        case .success(let saved):
-                            withAnimation{
-                                completion(.success(saved))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                    self?.mergeClips()
+                    if let movieAsset =  self?.movieAsset{
+                        
+                        self?.exportAsset(asset: movieAsset) { result in
+                            switch result{
+                            case .success(let saved):
+                                withAnimation{
+                                    completion(.success(saved))
+                                }
+                            case .failure(let error):
+                                completion(.failure(error))
                             }
-                        case .failure(let error):
-                            completion(.failure(error))
-                        }
-                }
-                    
+                    }
+                        
+                    }
                 }
             }
-                
+            
             
         }
     }
@@ -86,7 +87,7 @@ class VideoGenerator {
         
     }
     
-    private func generateFrames(from names: [String], duration: Double){
+    private func generateFrames(from names: [String], duration: Double, completion: @escaping ()->Void){
         
         
         for (index, imageName) in names.enumerated(){
@@ -143,7 +144,7 @@ class VideoGenerator {
             
         }
         
-        
+        completion()
         
     }
     
@@ -155,15 +156,19 @@ class VideoGenerator {
             
         for url in movieURLS{
             let asset = AVURLAsset(url: url)
-            let movieTrack = asset.tracks(withMediaType: .video)[0]
-            let movieRange = CMTimeRangeMake(start: CMTime.zero, duration: asset.duration)//3
-            do {
-                try videoTrack.insertTimeRange(movieRange, of: movieTrack, at: time)
-                time = CMTimeAdd(time, asset.duration)
+            asset.loadTracks(withMediaType: .video) { tracks, error in
+                guard let tracks = tracks, let movieTrack = tracks.first else {return}
+                
+                let movieRange = CMTimeRangeMake(start: CMTime.zero, duration: asset.duration)//3
+                do {
+                    try videoTrack.insertTimeRange(movieRange, of: movieTrack, at: time)
+                    time = CMTimeAdd(time, asset.duration)
+                }
+                catch{
+                print(error)
+                }
             }
-            catch{
-            print(error)
-            }
+            
             
         }
     

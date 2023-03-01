@@ -12,7 +12,7 @@ enum SaveState {
     case idle,saving, saved, error
 }
 
-class VideoViewModel : ObservableObject {
+final class VideoViewModel : ObservableObject {
     
     @Published var saveState : SaveState = .idle
     
@@ -24,7 +24,7 @@ class VideoViewModel : ObservableObject {
                 DispatchQueue.main.async{ [weak self] in
                     switch saved {
                     case .success(_):
-                        self?.saveState = .saved
+                        withAnimation(.interpolatingSpring(stiffness: 170, damping: 15).delay(2.5)){self?.saveState = .saved}
                     case .failure(_):
                         self?.saveState = .error
                     }

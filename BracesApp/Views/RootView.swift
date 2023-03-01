@@ -24,7 +24,7 @@ struct RootView: View {
             case .video:
                 VideoView()
             case .notification:
-                NotificationView()
+                NotificationView().environment(\.managedObjectContext, viewContext)
             }
             
             VStack{

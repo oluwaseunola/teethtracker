@@ -17,13 +17,26 @@ struct CameraView: View {
      
 
         ZStack{
+            Color.black.ignoresSafeArea(.all)
             CameraPreview(camera: viewModel)
                 .ignoresSafeArea()
             
             VStack{
                 
+                
+                
                 HStack{
                     Spacer()
+                    Button(action: {
+                        withAnimation(.spring()) {
+                            viewModel.showTip = true
+                        }
+                    }, label: {
+                        Image(systemName: "info.circle.fill")
+                      .font(.system(size:40))
+                      .foregroundColor(Color("background2"))
+                    })
+                    
                     Button {
                         dismiss()
                     } label: {
@@ -91,8 +104,9 @@ struct CameraView: View {
                 }
             }
             
-            
-            
+            PopOut(isShown: $viewModel.showTip)
+                .offset(y: viewModel.showTip ? 0 : -UIScreen.main.bounds.size.height)
+
         }
         .onAppear {
             viewModel.repository = PhotoRepository()

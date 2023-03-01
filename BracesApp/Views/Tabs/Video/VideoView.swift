@@ -26,7 +26,8 @@ struct VideoView: View {
                 EmptyView()
             case .saving :
                 VStack{
-                    Text("Saving Video")
+                    Text("Saving Your Smile")
+                        .font(.custom(FontManager.bold, size: 11))
                     ProgressView()
                 }
                 .frame(width:150, height: 100)
@@ -34,16 +35,30 @@ struct VideoView: View {
                 .cornerRadius(20)
                 .padding(.bottom)
             case .saved :
+                
+                VStack{
                 Image(systemName: "checkmark.circle")
-                    .font(.system(size:50))
-                    .foregroundColor(.green)
-                    .padding(.bottom)
+                        .font(.system(size:50))
+                        .foregroundColor(.green)
+                        
+                    Text("Video saved to camera roll")
+                        .font(.custom(FontManager.bold, size: 12))
+        
+                }
+                .padding(.bottom)
+
             case .error:
                 Image(systemName: "x.circle")
                     .font(.system(size:50))
                     .foregroundColor(.red)
                     .padding(.bottom)
             }
+            
+            Text("Choose duration of each slide: \(String(format:"%.1f", sliderValue)) seconds")
+                .font(.custom(FontManager.regular, size: 15))
+            
+            Slider(value: $sliderValue, in: 0.1...5)
+        
             
             let images = items.map{ PhotoItem -> UIImage in
                 if let data = PhotoItem.data{
@@ -66,13 +81,18 @@ struct VideoView: View {
                 
             } label: {
                 Text("create video")
-            }
+                    .font(.custom(FontManager.bold, size: 15))
+                    .font(.custom(FontManager.bold, size: 15))
+                    .foregroundColor(Color("button1"))
+                    .font(.system(size: 20))
+                    .frame(width:150,height: 50)
+                    .background(Color("background"))
+                    .mask(Capsule())
+            }.disabled(viewModel.saveState == .idle || viewModel.saveState == .saved ? false : true )
+                .opacity(viewModel.saveState == .idle || viewModel.saveState == .saved ? 1 : 0.5 )
+                .padding(.top, 15)
             
-            Slider(value: $sliderValue, in: 0.1...5) {
-                
-            }
             
-            Text("Choose duration time: \(sliderValue) seconds")
             
         }
         .padding(.horizontal,20)
