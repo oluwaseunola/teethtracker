@@ -14,6 +14,7 @@
 		29056F3029809ED900C7BC3C /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056F2F29809ED900C7BC3C /* PhotoRepository.swift */; };
 		292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF429872F470073EE0D /* VideoGenerator.swift */; };
 		292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF6298745A20073EE0D /* CameraPreviewView.swift */; };
+		2948550129AFF423006DDC39 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948550029AFF423006DDC39 /* AddEventView.swift */; };
 		2955A9782999B8DD0063E4AD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9772999B8DD0063E4AD /* NotificationView.swift */; };
 		2955A97A2999BA510063E4AD /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9792999BA510063E4AD /* Page.swift */; };
 		2955A97E299AA2FA0063E4AD /* PopOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A97D299AA2FA0063E4AD /* PopOut.swift */; };
@@ -66,6 +67,7 @@
 		29056F2F29809ED900C7BC3C /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		292CDCF429872F470073EE0D /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoGenerator.swift; path = "../New Group/VideoGenerator.swift"; sourceTree = "<group>"; };
 		292CDCF6298745A20073EE0D /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		2948550029AFF423006DDC39 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		2955A9772999B8DD0063E4AD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2955A9792999BA510063E4AD /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		2955A97D299AA2FA0063E4AD /* PopOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOut.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				2955A9772999B8DD0063E4AD /* NotificationView.swift */,
+				2948550029AFF423006DDC39 /* AddEventView.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				29A4288529A2E1A200FBD042 /* NotificationViewModel.swift in Sources */,
 				292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */,
 				29038DDB29832360005D7C11 /* HomeViewModel.swift in Sources */,
+				2948550129AFF423006DDC39 /* AddEventView.swift in Sources */,
 				29056F2B29808B2C00C7BC3C /* CameraViewModel.swift in Sources */,
 				29D1CD52296E5BC400BB92CB /* HomeView.swift in Sources */,
 				29D1CD50296E32AC00BB92CB /* TabBarView.swift in Sources */,
@@ -653,8 +657,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please allow access to calendar ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Please allow access to reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -690,8 +696,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please allow access to calendar ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Please allow access to reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

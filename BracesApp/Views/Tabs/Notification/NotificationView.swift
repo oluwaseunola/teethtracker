@@ -6,43 +6,43 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct NotificationView: View {
     
     @StateObject var viewModel = NotificationViewModel()
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \PhotoItem.date, ascending: true)],
-        animation: .default) private var events: FetchedResults<Event>
+    @State var showEventEditor = false
     
     var body: some View {
         VStack{
             
-            Text("Upcoming Events")
-                .padding(.bottom,20)
+            Text("Create Reminders")
+                .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
                 .font(.custom(FontManager.bold, size: 30))
-            
-            if !events.isEmpty{
+                .frame(maxWidth:.infinity, alignment: .leading)
+            Spacer()
                 
-                List(events, id:\.id) { event in
-                    
+                Text("Add a reminder to your calendar!")
+                    .font(.custom(FontManager.regular, size: 20))
                 
-                }
-                .frame(maxWidth:.infinity)
-                .frame(height:500)
-                .padding(.horizontal,30)
+            Button {
+                showEventEditor.toggle()
+            } label: {
+                Text("Add Reminder")
+                    .font(.custom(FontManager.bold, size: 15))
+                    .font(.custom(FontManager.bold, size: 15))
+                    .foregroundColor(Color("button1"))
+                    .font(.system(size: 20))
+                    .frame(width:150,height: 50)
+                    .background(Color("background"))
+                    .mask(Capsule())
             }
-            else {
-                
-                ScrollView{
-                    Text("No upcoming events")
-                }
-                .frame(maxWidth:.infinity)
-                .frame(height:500)
-                .padding(.horizontal,30)
-                
-                
-            }
+
             
+            Spacer()
+            
+        }.sheet(isPresented: $showEventEditor) {
+            EventEditView(eventStore: EKEventStore(), event: nil)
         }
     }
 }
