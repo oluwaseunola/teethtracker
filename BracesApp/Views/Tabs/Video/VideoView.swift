@@ -19,11 +19,25 @@ struct VideoView: View {
     var body: some View {
         
         VStack{
+            VStack{
+                Text("Create Your")
+                    .padding(EdgeInsets(top: 20, leading:20, bottom:0 , trailing: 0))
+                    .font(.custom(FontManager.bold, size: 40))
+                    .frame(maxWidth:.infinity, alignment: .leading)
+                Text("Masterpiece.")
+                    .padding(EdgeInsets(top: -50, leading:20, bottom:0 , trailing: 0))
+                    .font(.custom(FontManager.bold, size: 40))
+                    .frame(maxWidth:.infinity, alignment: .leading)
+                
+            }.offset(y:20)
             
             
+        Spacer()
             switch viewModel.saveState {
             case .idle :
-                EmptyView()
+                Image("Video")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             case .saving :
                 VStack{
                     Text("Saving Your Smile")
@@ -54,7 +68,7 @@ struct VideoView: View {
                     .padding(.bottom)
             }
             
-            Text("Choose duration of each slide: \(String(format:"%.1f", sliderValue)) seconds")
+            Text("Choose duration of each image: \(String(format:"%.1f", sliderValue)) seconds")
                 .font(.custom(FontManager.regular, size: 15))
             
             Slider(value: $sliderValue, in: 0.1...5)
@@ -80,7 +94,7 @@ struct VideoView: View {
                 viewModel.createVideo(from: images, names: names, duration: sliderValue)
                 
             } label: {
-                Text("create video")
+                Text("Create Video")
                     .font(.custom(FontManager.bold, size: 15))
                     .font(.custom(FontManager.bold, size: 15))
                     .foregroundColor(Color("button1"))
@@ -90,9 +104,9 @@ struct VideoView: View {
                     .mask(Capsule())
             }.disabled(viewModel.saveState == .idle || viewModel.saveState == .saved ? false : true )
                 .opacity(viewModel.saveState == .idle || viewModel.saveState == .saved ? 1 : 0.5 )
-                .padding(.top, 15)
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 100, trailing: 0))
             
-            
+            Spacer()
             
         }
         .padding(.horizontal,20)

@@ -15,6 +15,7 @@
 		292CDCF529872F470073EE0D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF429872F470073EE0D /* VideoGenerator.swift */; };
 		292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCF6298745A20073EE0D /* CameraPreviewView.swift */; };
 		2948550129AFF423006DDC39 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948550029AFF423006DDC39 /* AddEventView.swift */; };
+		2948550329B3B83B006DDC39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2948550229B3B83B006DDC39 /* Launch Screen.storyboard */; };
 		2955A9782999B8DD0063E4AD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9772999B8DD0063E4AD /* NotificationView.swift */; };
 		2955A97A2999BA510063E4AD /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A9792999BA510063E4AD /* Page.swift */; };
 		2955A97E299AA2FA0063E4AD /* PopOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2955A97D299AA2FA0063E4AD /* PopOut.swift */; };
@@ -27,6 +28,7 @@
 		2960C9792996EFE8008E57F7 /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2960C9632996EFE8008E57F7 /* Jost-Light.ttf */; };
 		2960C9822996F9E7008E57F7 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960C9812996F9E7008E57F7 /* FontManager.swift */; };
 		29A4288529A2E1A200FBD042 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4288429A2E1A200FBD042 /* NotificationViewModel.swift */; };
+		29BEC8DB29B65E400055C11B /* DetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEC8DA29B65E400055C11B /* DetailImage.swift */; };
 		29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */; };
 		29D1CD20296E324A00BB92CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD1F296E324A00BB92CB /* RootView.swift */; };
 		29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1CD21296E324D00BB92CB /* Assets.xcassets */; };
@@ -68,6 +70,7 @@
 		292CDCF429872F470073EE0D /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoGenerator.swift; path = "../New Group/VideoGenerator.swift"; sourceTree = "<group>"; };
 		292CDCF6298745A20073EE0D /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		2948550029AFF423006DDC39 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		2948550229B3B83B006DDC39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2955A9772999B8DD0063E4AD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2955A9792999BA510063E4AD /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		2955A97D299AA2FA0063E4AD /* PopOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOut.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		2960C9632996EFE8008E57F7 /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		2960C9812996F9E7008E57F7 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		29A4288429A2E1A200FBD042 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		29BEC8DA29B65E400055C11B /* DetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImage.swift; sourceTree = "<group>"; };
 		29D1CD1A296E324A00BB92CB /* BracesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BracesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracesAppApp.swift; sourceTree = "<group>"; };
 		29D1CD1F296E324A00BB92CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				2960C9492989CC2D008E57F7 /* Info.plist */,
 				29D1CD1D296E324A00BB92CB /* BracesAppApp.swift */,
+				2948550229B3B83B006DDC39 /* Launch Screen.storyboard */,
 				2960C94D29944D71008E57F7 /* Extensions */,
 				2960C94A2991EA8B008E57F7 /* Tools */,
 				29D1CD4C296E326A00BB92CB /* Models */,
@@ -299,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				2955A9792999BA510063E4AD /* Page.swift */,
+				29BEC8DA29B65E400055C11B /* DetailImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2948550329B3B83B006DDC39 /* Launch Screen.storyboard in Resources */,
 				2960C9792996EFE8008E57F7 /* Jost-Light.ttf in Resources */,
 				29D1CD25296E324D00BB92CB /* Preview Assets.xcassets in Resources */,
 				29D1CD22296E324D00BB92CB /* Assets.xcassets in Resources */,
@@ -481,6 +488,7 @@
 				29D1CD54296E5BD200BB92CB /* CameraView.swift in Sources */,
 				29D1CD20296E324A00BB92CB /* RootView.swift in Sources */,
 				29D1CD1E296E324A00BB92CB /* BracesAppApp.swift in Sources */,
+				29BEC8DB29B65E400055C11B /* DetailImage.swift in Sources */,
 				2960C9822996F9E7008E57F7 /* FontManager.swift in Sources */,
 				292CDCF7298745A20073EE0D /* CameraPreviewView.swift in Sources */,
 				2960C9522996A118008E57F7 /* OnboardingView.swift in Sources */,
@@ -657,13 +665,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Smile Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please allow access to calendar ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Please allow access to your contacts to schedule events";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Please allow access to reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,13 +707,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BracesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Smile Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please allow access to calendar ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow your camera to be used";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to save video";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Please allow access to your contacts to schedule events";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Please allow access to reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

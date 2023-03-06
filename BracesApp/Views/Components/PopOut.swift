@@ -30,7 +30,7 @@ struct PopOut: View {
               }.offset(y: -30)
               
             
-              Text("To ensure best results, use the masked area and take your selfie in a well lit area!")
+              Text("To ensure best results, use the masked area and take your selfie in a well-lit area!")
                   .multilineTextAlignment(.center)
             .font(.custom(FontManager.bold, size: 13))
             .padding(.horizontal)

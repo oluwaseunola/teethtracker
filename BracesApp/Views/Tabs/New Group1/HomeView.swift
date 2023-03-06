@@ -24,7 +24,7 @@ struct HomeView: View {
     private var gridRows = Array(repeating: GridItem(spacing:10), count: 3)
     @State private var showCamera = false
     @State private var showDetial = false
-    @State private var currentImage : Image = Image(systemName: "person")
+    @State private var currentItem : DetailImage?
     @State private var imagePicked = "Delete"
     
     var body: some View {
@@ -34,8 +34,10 @@ GeometryReader{ geometry in
     VStack{
             
             HStack{
-                Text("SmileTracker")
-                    .font(.custom(FontManager.bold, size: 20))
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:200,height: 200)
                 Spacer()
                 Button {
                     showCamera = true
@@ -74,7 +76,6 @@ GeometryReader{ geometry in
                                             if let itemDate = item.date{Text(itemFormatter.string(from: itemDate))}
                                             
                                             Button(role:.destructive) {
-        //                                          Delete Item
                                                 viewModel.deleteImage(context: viewContext, image: item)
                                                 
                                             } label: {
@@ -89,10 +90,8 @@ GeometryReader{ geometry in
                                         }
                                         .onTapGesture {
                                             if let imageData = item.data, let image = UIImage(data: imageData){
-                                                currentImage = Image(uiImage: image)
+                                                currentItem = DetailImage(image: Image(uiImage: image))
                                             }
-
-                                            showDetial = true
                                         }
                                 }
                                 
@@ -114,11 +113,9 @@ GeometryReader{ geometry in
     .fullScreenCover(isPresented: $showCamera){
         CameraView().environment(\.managedObjectContext, viewContext)
     }
-    .sheet(isPresented: $showDetial) {
-            DetailView(detail: currentImage)
+    .sheet(item: $currentItem) { item in
+        DetailView(detail: item.image)
     }
-
-    
 }
         
         
@@ -128,6 +125,5 @@ GeometryReader{ geometry in
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-        
     }
 }

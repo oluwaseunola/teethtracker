@@ -12,6 +12,7 @@ struct CameraView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) var viewContext
     @StateObject private var viewModel = CameraViewModel()
+    @State private var showMask = true
     var body: some View {
         
      
@@ -27,6 +28,19 @@ struct CameraView: View {
                 
                 HStack{
                     Spacer()
+                    Button {
+                        showMask.toggle()
+                    } label: {
+                        Image(systemName: "rectangle.dashed")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                            .frame(width: 40,height: 40)
+                            .background(Color("background2"))
+                            .mask(Circle())
+                            
+                           
+                    }
+                    
                     Button(action: {
                         withAnimation(.spring()) {
                             viewModel.showTip = true
@@ -85,27 +99,43 @@ struct CameraView: View {
 
                 } else {
                     
-                    Button {
-                        viewModel.takePic()
-                    } label: {
-                        ZStack{
-                            
-                            Circle()
-                                .foregroundColor(.white)
-                                .frame(width:65,height:65)
-                            Circle()
-                                .stroke(lineWidth: 2)
-                                .foregroundColor(.white)
-                                .frame(width:75,height:75)
+                    
+                        Button {
+                            viewModel.takePic()
+                        } label: {
+                            ZStack{
                                 
-                            
+                                Circle()
+                                    .foregroundColor(.white)
+                                    .frame(width:65,height:65)
+                                Circle()
+                                    .stroke(lineWidth: 2)
+                                    .foregroundColor(.white)
+                                    .frame(width:75,height:75)
+                                    
+                                
+                            }
                         }
-                    }
+                        
+
+
+                    
                 }
             }
             
             PopOut(isShown: $viewModel.showTip)
                 .offset(y: viewModel.showTip ? 0 : -UIScreen.main.bounds.size.height)
+            
+            if showMask && !viewModel.isTaken {
+                RoundedRectangle(cornerRadius: 15, style: .circular)
+                    .strokeBorder(style: StrokeStyle(lineWidth: 4,dash: [10]))
+                    .frame(width: 300, height: 200)
+                    .foregroundColor(.white)
+            }
+                
+                
+            
+                
 
         }
         .onAppear {

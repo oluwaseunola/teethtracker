@@ -16,19 +16,23 @@ struct NotificationView: View {
     var body: some View {
         VStack{
             
-            Text("Create Reminders")
+            Text("Create Reminders.")
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
-                .font(.custom(FontManager.bold, size: 30))
+                .font(.custom(FontManager.bold, size: 40))
                 .frame(maxWidth:.infinity, alignment: .leading)
-            Spacer()
+                .offset(y:20)
                 
-                Text("Add a reminder to your calendar!")
-                    .font(.custom(FontManager.regular, size: 20))
+                Image("Reminder")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+                Text("Add a reminder to your calendar app")
+                    .font(.custom(FontManager.regular, size: 15))
                 
             Button {
                 showEventEditor.toggle()
             } label: {
-                Text("Add Reminder")
+                Text("Add")
                     .font(.custom(FontManager.bold, size: 15))
                     .font(.custom(FontManager.bold, size: 15))
                     .foregroundColor(Color("button1"))
@@ -41,7 +45,8 @@ struct NotificationView: View {
             
             Spacer()
             
-        }.sheet(isPresented: $showEventEditor) {
+        }
+        .padding(.horizontal,20).sheet(isPresented: $showEventEditor) {
             EventEditView(eventStore: EKEventStore(), event: nil)
         }
     }
