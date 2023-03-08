@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel : HomeViewModel = HomeViewModel(repository: HomeRepository())
     @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.colorScheme) var colorScheme
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \PhotoItem.date, ascending: true)],
         animation: .default) private var items: FetchedResults<PhotoItem>
@@ -56,7 +57,9 @@ GeometryReader{ geometry in
             .frame(maxWidth:.infinity)
             .frame(height:100)
             .padding(.horizontal)
-            .background(Color("background2"))
+            .background(
+                colorScheme == .light ? Color("background2") : Color("background")
+            )
             
         
         if !items.isEmpty {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
     @Binding var selectedTab : Tab
     
     var body: some View {
@@ -58,7 +58,9 @@ struct TabBarView: View {
         }
         .frame(height:80)
         .frame(maxWidth:.infinity)
-        .background(.ultraThickMaterial)
+        .background(
+            colorScheme == .light ? Color("background2") : Color("background")
+        )
         .cornerRadius(15)
         .padding(.horizontal)
         

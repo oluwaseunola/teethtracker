@@ -33,6 +33,7 @@ struct OnboardingView: View {
                                 .padding(.horizontal,20)
                                 .frame(width:proxy.size.width-20)
                                 .font(.custom(FontManager.light, size: 20))
+                                .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                                 
                             
