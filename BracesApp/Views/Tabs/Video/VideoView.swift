@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct VideoView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = VideoViewModel()
     
     @FetchRequest(
@@ -35,7 +37,7 @@ struct VideoView: View {
         Spacer()
             switch viewModel.saveState {
             case .idle :
-                Image("Video")
+                Image(colorScheme == .light ? "Video" : "VideoDark")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             case .saving :

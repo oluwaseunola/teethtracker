@@ -9,20 +9,26 @@ import SwiftUI
 import EventKit
 
 struct NotificationView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = NotificationViewModel()
     @State var showEventEditor = false
     
     var body: some View {
         VStack{
             
-            Text("Create Reminders.")
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 0))
-                .font(.custom(FontManager.bold, size: 40))
-                .frame(maxWidth:.infinity, alignment: .leading)
-                .offset(y:20)
+            VStack{
+                Text("Create")
+                    .padding(EdgeInsets(top: 20, leading:20, bottom:0 , trailing: 0))
+                    .font(.custom(FontManager.bold, size: 40))
+                    .frame(maxWidth:.infinity, alignment: .leading)
+                Text("Reminders.")
+                    .padding(EdgeInsets(top: -50, leading:20, bottom:0 , trailing: 0))
+                    .font(.custom(FontManager.bold, size: 40))
+                    .frame(maxWidth:.infinity, alignment: .leading)
                 
-                Image("Reminder")
+            }.offset(y:20)
+                
+            Image(colorScheme == .light ? "Reminder" : "ReminderDark")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
